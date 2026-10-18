@@ -3,6 +3,10 @@
 Automatically remembers the player volume for each Twitch and YouTube channel. Use the site's own
 volume slider as usual; the extension saves it per channel and restores it next time. No popup, no setup.
 
+![A different volume for every channel](store/screenshots/screenshot-1.png)
+![No popup, no setup](store/screenshots/screenshot-2.png)
+![Private by design](store/screenshots/screenshot-3.png)
+
 ## Install (development)
 1. Open `chrome://extensions` and enable **Developer mode**.
 2. Click **Load unpacked** and select this folder.
@@ -18,6 +22,9 @@ Add an adapter in `content.js` (`getChannel()` and `setVolume()`) and a match pa
 
 ## Privacy
 Everything stays on your device. See [PRIVACY.md](PRIVACY.md).
+
+## Install from a release
+Download `channel-volume-memory.zip` from the [Releases](../../releases) page, unzip it, then use **Load unpacked** as above.
 
 ## Packaging
 Run `./build.sh` to produce `dist/channel-volume-memory.zip` for the Chrome Web Store.
