@@ -18,3 +18,7 @@ remembers the volume (and mute state) you set for each channel and restores it a
 
 **Single purpose:** Remember and restore the video player volume per channel on Twitch and YouTube.
 **Data usage:** No user data collected; no data leaves the device.
+
+**Screenshots:** `store/screenshots/screenshot-1.png` to `screenshot-3.png` (1280x800, 24-bit PNG).
+Source HTML is in `store/src/`; re-render with headless Chrome:
+`chrome --headless=new --window-size=1280,800 --screenshot=out.png file:///.../store/src/1.html`

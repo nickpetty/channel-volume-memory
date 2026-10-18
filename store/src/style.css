@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 800px; }
+body {
+  font-family: "Segoe UI", system-ui, sans-serif; color: #fff;
+  background: radial-gradient(1200px 700px at 15% 0%, #7a3dff 0%, #3b1a8a 45%, #1a0f3d 100%);
+  display: flex; flex-direction: column; justify-content: center; padding: 70px 90px; overflow: hidden;
+}
+.brand { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 22px; opacity: .9; margin-bottom: 28px; }
+.brand img { width: 44px; height: 44px; }
+h1 { font-size: 64px; line-height: 1.08; font-weight: 800; letter-spacing: -1px; max-width: 1000px; }
+h1 span { color: #c9b0ff; }
+.sub { font-size: 26px; color: #d8cdf5; margin-top: 18px; max-width: 900px; }
+.cards { display: flex; gap: 28px; margin-top: 56px; }
+.card { flex: 1; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 28px; }
+.chip { display: inline-block; font-size: 15px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.18); }
+.card h3 { font-size: 28px; margin: 16px 0 24px; }
+.slider { display: flex; align-items: center; gap: 14px; }
+.track { flex: 1; height: 10px; border-radius: 6px; background: rgba(255,255,255,.22); position: relative; }
+.fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: #fff; }
+.knob { position: absolute; top: 50%; width: 24px; height: 24px; border-radius: 50%; background: #fff; transform: translate(-50%, -50%); box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+.pct { font-size: 28px; font-weight: 800; width: 76px; text-align: right; }
+.steps { display: flex; gap: 28px; margin-top: 60px; align-items: stretch; }
+.step { flex: 1; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 32px; }
+.num { width: 52px; height: 52px; border-radius: 50%; background: #fff; color: #5a28c8; font-weight: 800; font-size: 28px; display: grid; place-items: center; }
+.step h3 { font-size: 30px; margin: 22px 0 10px; }
+.step p { font-size: 21px; color: #d8cdf5; line-height: 1.4; }
+.arrow { align-self: center; font-size: 40px; color: #c9b0ff; margin: 0 -10px; }
+.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 52px; }
+.feat { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 22px; padding: 28px 32px; display: flex; gap: 22px; align-items: center; }
+.ico { font-size: 44px; }
+.feat h3 { font-size: 28px; margin-bottom: 6px; }
+.feat p { font-size: 20px; color: #d8cdf5; line-height: 1.35; }
