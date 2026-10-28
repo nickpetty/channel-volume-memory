@@ -9,6 +9,12 @@ const TWITCH_RESERVED = new Set([
   'wallet', 'drops', 'friends', 'downloads', 'turbo', 'prime', 'search', 'u', 'moderator',
 ]);
 
+const KICK_RESERVED = new Set([
+  'browse', 'category', 'categories', 'events', 'video', 'videos', 'clips', 'clip', 'dashboard',
+  'following', 'search', 'settings', 'popout', 'community-guidelines', 'terms-of-service',
+  'privacy-policy', 'dmca-policy', 'support', 'creator-dashboard', 'subscriptions', 'wallet',
+]);
+
 const adapters = {
   'www.twitch.tv': {
     id: 'twitch',
@@ -25,6 +31,19 @@ const adapters = {
         slider.dispatchEvent(new Event('input', { bubbles: true }));
         slider.dispatchEvent(new Event('change', { bubbles: true }));
       }
+      video.volume = volume;
+      video.muted = muted;
+    },
+  },
+  'kick.com': {
+    id: 'kick',
+    getChannel() {
+      const seg = location.pathname.split('/').filter(Boolean)[0];
+      return seg && !KICK_RESERVED.has(seg.toLowerCase()) ? seg.toLowerCase() : null;
+    },
+    // Kick's slider is a custom control that can't be driven reliably from a content script, so set the
+    // video directly. The on-screen slider catches up the next time the user touches it.
+    setVolume(video, { volume, muted }) {
       video.volume = volume;
       video.muted = muted;
     },

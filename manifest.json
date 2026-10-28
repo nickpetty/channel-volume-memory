@@ -2,24 +2,36 @@
   "manifest_version": 3,
   "name": "Channel Volume Memory",
   "short_name": "Volume Memory",
-  "version": "1.1.0",
-  "description": "Remembers the player volume for each Twitch and YouTube channel. No popup, no setup.",
+  "version": "1.2.0",
+  "description": "Remembers the player volume for each Twitch, YouTube and Kick channel. No popup, no setup.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://www.twitch.tv/*", "https://www.youtube.com/*"],
-      "js": ["content.js"],
+      "matches": [
+        "https://www.twitch.tv/*",
+        "https://www.youtube.com/*",
+        "https://kick.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["youtube-bridge.js"],
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "youtube-bridge.js"
+      ],
       "world": "MAIN",
       "run_at": "document_start"
     }
